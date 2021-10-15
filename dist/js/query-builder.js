@@ -5691,7 +5691,7 @@ QueryBuilder.extend(/** @lends module:plugins.SqlSupport.prototype */ {
                      * @param {Rule} rule
                      * @returns {string}
                      */
-                    var field = self.change('getSQLField', rule.field, rule);
+                    var field = self.change('getSQLField', '"' + rule.field + '"', rule);
 
                     var ruleExpression = field + ' ' + sqlFn(value);
 
